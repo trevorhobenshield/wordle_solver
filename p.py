@@ -1,5 +1,5 @@
+#arthur whitney
 from functools import partial
-
 n=2315
 x=bytearray(open('../k/m','rb').read())
 m=[x[i:i+n]for i in range(0,len(x),n)]
@@ -23,8 +23,4 @@ def p(x):
 
 g=lambda x:len(x)+(len(x)-1 if 3>len(x) else sum(lap(g,p(x))))
 x=range(n)
-print(g(x))
-
-#k
-#p::m[a;x]!x_:a:*>(!'m@\x)+(!#m)in x
-#g::n+if 3>n:#x then n-1 else sum g'p x
+g(x)
